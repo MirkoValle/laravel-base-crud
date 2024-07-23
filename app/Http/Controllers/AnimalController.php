@@ -24,14 +24,25 @@ class AnimalController extends Controller
         return view('pages.show', compact("animal"));
     }
 
+    public function create()
+    {
+        return view('pages.create');
+    }
+
+
+    public function store(Request $request)
+    {
+        $data = $request->All();
+
+        $newAnimal = Animal::create($data);
+        return redirect()->route('animals.show', $newAnimal);
+    }
 
 
 
 
 
 
-
-    
 
 
     /**
