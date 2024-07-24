@@ -9,8 +9,8 @@
 
     <div class="container">
         <div class="form_area">
-            <p class="title">CREATE NEW ANIMAL</p>
-            <form class="all_form" action="{{ route('animals.update', $animal)}}" method="POST">
+            <p class="title">Modifica {{ $animal->nome}}</p>
+            <form class="all_form" action="{{ route('animals.update', $animal)}}" method="POST" id="creation-form">
                 @csrf
                 @method("PUT")
                 <div class="form_group">
@@ -63,4 +63,8 @@
     </div>
 
 </section>
+@endsection
+
+@section('custom-scripts')
+    @vite('resources/js/creation-confirm.js')
 @endsection

@@ -34,11 +34,30 @@ header{
     }
 }
 
+div.deleted-message{
+    padding: 1rem;
+    background-color: rgb(175, 212, 175);
+    p{
+        margin: 0;
+        text-align: center;
+    }
+}
+
+div.edited-message{
+    padding: 1rem;
+    background-color: rgb(175, 212, 175);
+    p{
+        margin: 0;
+        text-align: center;
+    }
+}
+
 section.home{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(143, 91, 71);
+
 
     article{
         width: calc((100% / 5) - 3rem);
@@ -58,14 +77,24 @@ section.home{
             height: 15rem;
 
         }
-        button{
-            padding: .5rem;
-            margin: .5rem 0 .5rem 7rem;
-            background-color: rgb(233, 235, 238);
-            border-radius: 1rem;
-            a{
-                text-decoration: none;
-                color: black;
+        div.button{
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+            form{
+                display: inline;
+            }
+
+            button{
+                padding: .5rem;
+                margin: .5rem;
+
+                background-color: rgb(233, 235, 238);
+                border-radius: 1rem;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
             }
         }
     }

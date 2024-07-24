@@ -8,7 +8,7 @@
     <div class="container">
         <div class="form_area">
             <p class="title">CREATE NEW ANIMAL</p>
-            <form class="all_form" action="{{ route('animals.store')}}" method="POST">
+            <form class="all_form" action="{{ route('animals.store')}}" method="POST" id="creation-form">
                 @csrf
                 <div class="form_group">
                     <label class="sub_title" for="nome">Nome</label>
@@ -60,4 +60,9 @@
     </div>
 
 </section>
+@endsection
+
+
+@section('custom-scripts')
+    @vite('resources/js/creation-confirm.js')
 @endsection
