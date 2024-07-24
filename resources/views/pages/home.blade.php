@@ -14,6 +14,11 @@
             <img src={{$animal->url_img}} alt="Foto di {{$animal->nome}}">
             <button><a href="{{ route('animals.show', $animal)}}">Clicca per più info</a></button>
             <button><a href="{{ route('animals.edit', $animal)}}">Modifica</a></button>
+            <form action="{{ route('animals.destroy', $animal)}}" method="POST" class="delete">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Elimina</button>
+            </form>
         </article>
         @endforeach
     </section>
