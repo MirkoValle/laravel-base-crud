@@ -13,6 +13,7 @@
             </div>
             <img src={{$animal->url_img}} alt="Foto di {{$animal->nome}}">
             <button><a href="{{ route('animals.show', $animal)}}">Clicca per più info</a></button>
+            <button><a href="{{ route('animals.edit', $animal)}}">Modifica</a></button>
         </article>
         @endforeach
     </section>

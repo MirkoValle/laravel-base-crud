@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('page-title', 'Show animal')
-
+@section('page-title')
+    Show {{ $animal->nome }}
+@endsection
 @section('main-content')
 <section class="show">
     <img src={{$animal->url_img}} alt="{{$animal->nome}}">
