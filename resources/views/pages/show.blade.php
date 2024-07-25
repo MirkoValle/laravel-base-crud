@@ -5,11 +5,11 @@
 @endsection
 @section('main-content')
 
-@if(session('message'))
-    <div class="edited-message"> <p>{{session('message')}}</p></div>
-@endif
 
 <section class="show">
+    @if(session('message'))
+        <div class="edited-message"> <p>{{session('message')}}</p></div>
+    @endif
     <img src={{$animal->url_img}} alt="{{$animal->nome}}">
     <section>
         <h1>{{$animal->nome}}</h1>

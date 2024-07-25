@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreAnimalRequest;
 use App\Models\Animal;
 use Illuminate\Http\Request;
 
@@ -29,8 +30,7 @@ class AnimalController extends Controller
         return view('pages.create');
     }
 
-
-    public function store(Request $request)
+    public function store(StoreAnimalRequest $request)
     {
         $data = $request->All();
 
@@ -49,7 +49,7 @@ class AnimalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Animal $animal)
+    public function update(StoreAnimalRequest $request, Animal $animal)
     {
         $data = $request->all();
 

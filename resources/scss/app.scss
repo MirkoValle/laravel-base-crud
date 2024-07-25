@@ -3,6 +3,19 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+div.error-message{
+    width: 1250px;
+    background-color: rgb(241, 155, 155);
+    border-radius: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    ul{
+        margin: 0;
+        li{
+            color: rgb(192, 1, 1);
+        }
+    }
+}
 
 header{
     div{
@@ -37,6 +50,9 @@ header{
 div.deleted-message{
     padding: 1rem;
     background-color: rgb(175, 212, 175);
+    width: 450px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
     p{
         margin: 0;
         text-align: center;
@@ -46,6 +62,9 @@ div.deleted-message{
 div.edited-message{
     padding: 1rem;
     background-color: rgb(175, 212, 175);
+    width: 450px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
     p{
         margin: 0;
         text-align: center;
@@ -53,51 +72,60 @@ div.edited-message{
 }
 
 section.home{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     background-color: rgb(143, 91, 71);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
-    article{
-        width: calc((100% / 5) - 3rem);
-        margin: 1rem;
-        border: 1px solid black;
-        background-color: bisque;
-        div{
-            padding-left: 1rem;
-            h1{
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 1.5rem;
+        article{
+            width: calc((100% / 5) - 3rem);
+            margin: 1rem;
+            border: 1px solid black;
+            background-color: bisque;
+            div{
+                padding-left: 1rem;
+                h1{
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                }
             }
-        }
-        img{
-            width: 100%;
-            height: 15rem;
+            img{
+                width: 100%;
+                height: 15rem;
 
-        }
-        div.button{
-            display: flex;
-            justify-content: center;
-            padding-left: 0;
-            form{
-                display: inline;
             }
+            div.button{
+                display: flex;
+                justify-content: center;
+                padding-left: 0;
+                form{
+                    display: inline;
+                }
 
-            button{
-                padding: .5rem;
-                margin: .5rem;
+                button{
+                    padding: .5rem;
+                    margin: .5rem;
 
-                background-color: rgb(233, 235, 238);
-                border-radius: 1rem;
-                a{
-                    text-decoration: none;
-                    color: black;
+                    background-color: rgb(233, 235, 238);
+                    border-radius: 1rem;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
                 }
             }
         }
     }
+
+
 
 }
 
@@ -139,9 +167,13 @@ button{
 
 section.create{
     background-color: rgb(143, 91, 71);
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 76px);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .container {
-        padding-top: 7rem;
         display: flex;
         align-items: center;
         justify-content: center;
