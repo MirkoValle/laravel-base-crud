@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Create new animal')
+@section('page-title', 'Crea un nuovo animale')
 
 @section('main-content')
 <section class="create">
@@ -19,7 +19,7 @@
     <div class="container">
 
         <div class="form_area">
-            <p class="title">CREATE NEW ANIMAL</p>
+            <p class="title">CREA UN NUOVO ANIMALE</p>
             <form class="all_form" action="{{ route('animals.store')}}" method="POST" id="creation-form">
                 @csrf
                 <div class="form_group">
@@ -64,7 +64,7 @@
                 </div>
 
                 <div>
-                    <input class="btn" type="submit" value="Create">
+                    <input class="btn" type="submit" value="Crea">
                     <input class="btn reset" type="reset" value="Reset">
                 </div>
             </form>

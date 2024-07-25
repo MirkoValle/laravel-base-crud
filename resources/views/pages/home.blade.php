@@ -17,12 +17,12 @@
                 </div>
                 <img src={{$animal->url_img}} alt="Foto di {{$animal->nome}}">
                 <div class="button">
-                    <button><a href="{{ route('animals.show', $animal)}}">Dettagli</a></button>
-                    <button><a href="{{ route('animals.edit', $animal)}}">Modifica</a></button>
+                    <button class="info"><a href="{{ route('animals.show', $animal)}}">Dettagli</a></button>
+                    <button class="edit"><a href="{{ route('animals.edit', $animal)}}">Modifica</a></button>
                     <form action="{{ route('animals.destroy', $animal)}}" method="POST" class="delete" >
                         @csrf
                         @method('DELETE')
-                        <button type="submit">Elimina</button>
+                        <button class="delete" type="submit">Elimina</button>
                     </form>
                 </div>
             </article>

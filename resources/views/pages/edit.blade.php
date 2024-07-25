@@ -65,7 +65,7 @@
                 </div>
 
                 <div>
-                    <input class="btn" type="submit" value="Update {{$animal->nome}}">
+                    <input class="btn" type="submit" value="Modifica {{$animal->nome}}">
                     <input class="btn reset" type="reset" value="Reset">
                 </div>
             </form>
